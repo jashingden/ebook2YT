@@ -1,0 +1,54 @@
+{
+  "Name": "pcreader",
+  "CreationDate": "2026-3-13",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "pageIdx",
+      "Description": ""
+    },
+    {
+      "Command": "do",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "captureScreenshot",
+      "Target": "001-${pageIdx}.png",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "localStorageExport",
+      "Target": "001-${pageIdx}.png",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "500,500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "return Number(${pageIdx}) + 1;",
+      "Value": "pageIdx",
+      "Description": ""
+    },
+    {
+      "Command": "repeatIf",
+      "Target": "${pageIdx} <= 10",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
