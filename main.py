@@ -12,6 +12,7 @@ ocr = PaddleOCR(
 load_dotenv()
 ebook_dir = os.getenv("EBOOK_DIR")
 ebook_txt = os.getenv("EBOOK_TXT")
+ebook_cover = os.getenv("EBOOK_COVER")
 
 def get_img_files():
     img_files = []
@@ -80,8 +81,15 @@ def convert_img_to_txt():
 
     print('全部檔案處理完成!')
 
+def crop_cover_img():
+    # 240p (SD)：426x240
+    crop_area = (500, 320, 926, 560)
+    crop_image(ebook_cover, crop_area)
+    print('封面圖片裁切完成 ' + ebook_cover)
+
 
 if __name__ == "__main__":
+    crop_cover_img()
     convert_img_to_txt()
     merge_txt_files()
 

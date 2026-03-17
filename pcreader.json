@@ -1,6 +1,6 @@
 {
   "Name": "pcreader",
-  "CreationDate": "2026-3-13",
+  "CreationDate": "2026-3-16",
   "Commands": [
     {
       "Command": "store",
@@ -15,14 +15,20 @@
       "Description": ""
     },
     {
+      "Command": "executeScript",
+      "Target": "return ${pageIdx} < 10 ? \"00\"+ ${pageIdx} : (${pageIdx} < 100 ? \"0\" + ${pageIdx} : \"\" +${pageIdx})",
+      "Value": "pageNum",
+      "Description": ""
+    },
+    {
       "Command": "captureScreenshot",
-      "Target": "001-${pageIdx}.png",
+      "Target": "001-${pageNum}.png",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "localStorageExport",
-      "Target": "001-${pageIdx}.png",
+      "Target": "001-${pageNum}.png",
       "Value": "",
       "Description": ""
     },
