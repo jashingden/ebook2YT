@@ -9,4 +9,7 @@ ebook_dir=$1
 target_name=$2
 mp3_name=$ebook_dir/$target_name.mp3
 srt_name=$ebook_dir/$target_name.srt
+#male
 uv run edge-tts --rate +50% --volume +200% --voice zh-CN-YunxiNeural --file $ebook_dir/$target_name.txt --write-media $mp3_name --write-subtitles $srt_name
+#female
+#uv run edge-tts --rate +50% --volume +200% --voice zh-CN-XiaoxiaoNeural --file $ebook_dir/$target_name.txt --write-media $mp3_name --write-subtitles $srt_name
