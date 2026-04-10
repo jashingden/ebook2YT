@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "edge-tts>=7.2.7",
+    "edge-tts>=7.2.8",
     "paddleocr==3.3.3",
     "pillow>=12.1.1",
     "playwright>=1.58.0",

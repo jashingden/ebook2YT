@@ -83,13 +83,13 @@ def convert_img_to_txt():
 
 def crop_cover_img():
     # 240p (SD)：426x240
-    crop_area = (500, 320, 926, 560)
+    crop_area = (650, 420, 1076, 660)
     crop_image(ebook_cover, crop_area)
     print('封面圖片裁切完成 ' + ebook_cover)
 
 
 if __name__ == "__main__":
-    crop_cover_img()
+    #crop_cover_img()
     convert_img_to_txt()
-    merge_txt_files()
+    #merge_txt_files()
 
