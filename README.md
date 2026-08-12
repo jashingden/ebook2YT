@@ -18,6 +18,8 @@ uv add edge-tts
 uv run edge-tts --list-voices | grep zh-CN
 
 uv add Pillow
+
+uv add faster-whisper
 ```
 
 # FFmpeg

@@ -1,14 +1,14 @@
 from PIL import Image
 from dotenv import load_dotenv
 import os
-
+'''
 from paddleocr import PaddleOCR
 
 ocr = PaddleOCR(
     use_doc_orientation_classify=False,
     use_doc_unwarping=False,
     use_textline_orientation=False)
-
+'''
 load_dotenv()
 ebook_dir = os.getenv("EBOOK_DIR")
 ebook_txt = os.getenv("EBOOK_TXT")
@@ -83,13 +83,17 @@ def convert_img_to_txt():
 
 def crop_cover_img():
     # 240p (SD)：426x240
-    crop_area = (650, 420, 1076, 660)
+    crop_area = (830, 70, 1256, 310)
     crop_image(ebook_cover, crop_area)
     print('封面圖片裁切完成 ' + ebook_cover)
 
 
 if __name__ == "__main__":
-    #crop_cover_img()
-    convert_img_to_txt()
+    #crop_area = (1300, 25, 1630, 900)
+    #crop_image('012-014.png', crop_area)
+    #img2txt('012-014.png', '012-014.txt')
+
+    crop_cover_img()
+    #convert_img_to_txt()
     #merge_txt_files()
 
